@@ -27,7 +27,7 @@ class StockWebService(object):
     def POST(self):
         def get_date():
             date=datetime.date.today().strftime('%d%m%y')
-            return "060418"
+            return date
         
         try:
             r = requests.get("https://www.bseindia.com/download/BhavCopy/Equity/EQ{0}_CSV.ZIP".format(get_date()))
